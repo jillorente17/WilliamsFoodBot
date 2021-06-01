@@ -1,0 +1,16 @@
+{
+  "name": "WilliamsFoodBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "appBot.js",
+  "scripts": {
+    "start": "nodemon appBot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "node-telegram-bot-api": "^0.53.0"
+  }
+}
