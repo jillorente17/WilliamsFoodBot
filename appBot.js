@@ -5,7 +5,8 @@ const bot = new telegramBot(token,{polling:true});
 
 const text = require('../WilliamsFoodBot-1/otherFunctions/onText');
 const consult = require('../WilliamsFoodBot-1/otherFunctions/consult');
-const callback = require('../WilliamsFoodBot-1/otherFunctions/onCallback')
+const callback = require('../WilliamsFoodBot-1/otherFunctions/onCallback');
+const objInfo = require('../WilliamsFoodBot-1/otherFunctions/objReg')
 process.title = title;
 
 bot.on('polling_error',(e)=>{
@@ -15,6 +16,7 @@ bot.on('polling_error',(e)=>{
 bot.onText(/^\/registrar/,(msg)=>{
     chatId = msg.chat.id;
     regMsg = `Seguido de la palabra *Nombre*, escriba el producto`;
+    objInfo.check(chatId,'register','activated')
     bot.sendMessage(chatId,regMsg,{parse_mode:"Markdown"})
     consult.activity(mysql);
 })
