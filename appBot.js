@@ -21,6 +21,7 @@ bot.onText(/^\/registrar/,(msg)=>{
     consult.activity(mysql);
 })
 
+
 bot.on('text',(msg)=>{
     text.onText(msg);
     
